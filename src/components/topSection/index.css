@@ -1,0 +1,62 @@
+.topCenter{
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: #fff;
+    width: 40%;
+    height: 70%;
+    text-align: center;
+    padding: 60px;
+}
+.mainName{
+    font-size: 4.7rem;
+    font-weight: 800;
+    margin: 10px;
+}
+.slogan{
+    font-size: 2rem;
+    margin: 15px;
+    margin-bottom: 40px;
+}
+@media only screen and (max-width: 994px) {
+    .topCenter{
+        padding: 20px;
+    }
+    .mainName{
+        font-size: 50px;
+    }
+    .slogan{
+        font-size: 1rem;
+    }
+}
+@media only screen and (max-width: 857px) {
+    .topCenter{
+        padding: 0;
+    }
+    .mainName{
+        font-size: 40px;
+        margin: 20px;
+    }
+    .slogan{
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .topCenter{
+        padding: -20px;
+    }
+    .mainName{
+        font-size: 30px;
+        margin: 20px;
+    }
+    .slogan{
+        font-size: 1rem;
+    }
+    .description{
+        font-size: 12px;
+    }
+}
