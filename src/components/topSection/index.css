@@ -1,13 +1,17 @@
-.topCenter{
+.topCon{
     box-sizing: border-box;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1;
     color: #fff;
     width: 40%;
     height: 70%;
+    z-index: 1;
+    perspective: 800px;
+    perspective-origin: top;
+}
+.topCenter{
     text-align: center;
     padding: 60px;
 }
