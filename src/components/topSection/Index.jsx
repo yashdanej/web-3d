@@ -2,9 +2,6 @@ import React, { useRef } from 'react'
 import styled from 'styled-components'
 import { Canvas } from '@react-three/fiber';
 import './index.css';
-import gsap from 'gsap';
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
 
 const TopSection = ({myElement}) => {
   return (

@@ -14,33 +14,41 @@ const CanvasContainer = styled.div`
   height: 100%;
 `;
 function App() {
-  const ref = useRef();
-  // const tl = gsap.timeline({scrollTrigger:{
-  //   trigger: el.current,
-  //   from: "10% 50%",
-  //   end: "50% 50%",
-  //   markers: true,
-  //   scrub: true,
-  //   pin: true,
-  // }})
+  // const ref = useRef();
+  // gsap.to(ref.current, {
+  //   opacity: 0,
+  //   scrollTrigger: {
+  //     trigger: ref.current,
+  //     scroller: 'body',
+  //     markers: true,
+  //     start: 'top 10%',
+  //     end: "top 1%",
+  //     scrub: 5
+  //   }
+  // })
   
   // tl.to(".topCenter", {
   //   rotateX: "90deg"
   // })
+
   const myElement = useRef(null);
   useEffect(() => {
-    const el = ref.current;
-    gsap.fromTo(myElement.current, {rotation: 0}, {rotation: 160, duration: 3, scrollTrigger:{
-      trigger: el
+    const el = myElement.current;
+    gsap.fromTo(el, {opacity: 1}, {opacity: 0, scrollTrigger:{
+      trigger: el,
+      scrub: 3,
+      markers: true,
+      start: 'top',
+      end: 'bottom 90%'
     }})
   }, []);
   return (
     <>
-      <CanvasContainer ref={ref}>
+      <CanvasContainer>
         <TopSection myElement={myElement} />
         <Canvas>
           <Suspense fallback={null}>
-            <Earth/>
+            <Earth />
           </Suspense>
         </Canvas>
       </CanvasContainer>

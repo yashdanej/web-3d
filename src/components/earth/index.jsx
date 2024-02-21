@@ -10,8 +10,8 @@ import * as THREE from 'three';
 
 const Earth = (props) => {
     const [ colorMap, normalMap, specularMap, cloudMap ] = useLoader(TextureLoader, [EarthDayMap, EarthNormalMap, EarthSpecularMap, EarthCloudMap]);
-    const earthRef = useRef();
     const cloudRef = useRef();
+    const earthRef = useRef();
     useFrame(({ clock }) => {
         const elapsedTime = clock.getElapsedTime();
         earthRef.current.rotation.y = elapsedTime / 6
